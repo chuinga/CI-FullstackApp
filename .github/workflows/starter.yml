@@ -34,7 +34,7 @@ jobs:
         working-directory: ./backend
 
       # Run the linter.
-      - run: npm run lint
+      - run: npx eslint .
         working-directory: ./backend
 
       # Send a console message at completion.
