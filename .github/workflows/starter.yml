@@ -30,7 +30,7 @@ jobs:
         working-directory: ./backend
 
       # Run the tests.
-      - run: npm test
+      - run: npx mocha test.js
         working-directory: ./backend
 
       # Run the linter.
