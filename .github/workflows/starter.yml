@@ -33,8 +33,12 @@ jobs:
       - run: node test.js
         working-directory: ./backend
 
+      # Fix ESLint permissions
+      - run: chmod +x ./node_modules/.bin/eslint
+        working-directory: ./backend
+        
       # Run the linter.
-      - run: npx eslint .
+      - run: ./node_modules/.bin/eslint .
         working-directory: ./backend
 
       # Send a console message at completion.
